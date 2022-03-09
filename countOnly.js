@@ -17,7 +17,7 @@ const countOnly = (arr, obj) => {
   }
 
   for (let element in elementCounter) {
-    if (elementCounter.hasOwnProperty(element)) {
+    if (Object.hasOwnProperty.call(elementCounter, element)) {
       if (element in obj && obj[element]) {
         result[element] = elementCounter[element];
       }
