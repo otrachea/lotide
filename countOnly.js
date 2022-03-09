@@ -8,7 +8,6 @@ const countOnly = (arr, obj) => {
   
   let elementCounter = {};
   let result = {};
-  let keys = Object.keys(obj);
 
   for (let element of arr) {
     if (!(element in elementCounter)) {
