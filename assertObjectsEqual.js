@@ -1,34 +1,6 @@
-const eqArrays = (arr1, arr2) => {
-  if (arr1.length !== arr2.length) return false;
-
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) return false;
-  }
-  return true;
-};
-
-const eqObjects = (obj1, obj2) => {
-  // different number of keys
-  if (Object.keys(obj1).length !== Object.keys(obj2).length) return false;
-
-  for (const key in obj1) {
-    if (Object.hasOwnProperty.call(obj1, key)) {
-
-      // key is not in obj2
-      if (!(key in obj2)) return false;
-
-      // value for key is array
-      if (Array.isArray(obj1[key]) && Array.isArray(obj2[key])) {
-        return eqArrays(obj1[key], obj2[key]);
-      }
-
-      // primitive data type check
-      if (obj1[key] !== obj2[key]) return false;
-    }
-  }
-
-  return true;
-};
+import { eqObjects } from './eqObjects.js';
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
 
 const assertObjectsEqual = function (actual, expected) {
   const inspect = require('util').inspect;

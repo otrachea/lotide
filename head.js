@@ -1,8 +1,4 @@
-const assertEqual = function(actual, expected) {
-  (actual === expected) ?
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`) :
-    console.log(`🛑 Assertion Failed: ${actual} !== ${expected}`);
-};
+import { assertEqual } from "./assertEqual.js";
 
 const head = (arr) => {
   return arr[0];
