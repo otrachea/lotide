@@ -9,15 +9,16 @@ describe("#tail", () => {
   
   it("tail does not mutate the input array", () => {
     const arr1 = [1, 2, 3, 4];
-    arr2 = tail(arr1);
+    const arr2 = tail(arr1);
     assert.deepEqual(arr1, [1, 2, 3, 4]);
+    assert.notDeepEqual(arr2, arr1);
   });
 
   it("tail([1]) returns []", () => {
     assert.deepEqual(tail([1]), []);
-  })
+  });
 
   it("tail([]) returns []", () => {
     assert.deepEqual(tail([]), []);
-  })
+  });
 });

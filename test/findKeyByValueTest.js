@@ -24,7 +24,7 @@ describe("#findKeyByValue", () => {
   const test1 = {
     a: 1,
     b: "1"
-  }
+  };
   
   it("returns correct key", () => {
     assert.equal(findKeyByValue(test1, 1), "a");

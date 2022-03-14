@@ -8,7 +8,7 @@ describe("#middle", () => {
 
   it("middle[1, 2] returns []", () => {
     assert.deepEqual(middle([1, 2]), []);
-  })
+  });
 
   it("middle([1, 2, 3]) returns [2]", () => {
     assert.deepEqual(middle([1, 2, 3]), [2]);

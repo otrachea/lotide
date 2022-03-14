@@ -16,6 +16,6 @@ describe("#map", () => {
 
   it("returns [0, -1, -2, -3, -4]", () => {
     assert.deepEqual(map([5, 4, 3, 2, 1], num => num - 5), [0, -1, -2, -3, -4]);
-  })
+  });
 
 });

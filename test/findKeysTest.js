@@ -10,7 +10,7 @@ describe("#findKey", () => {
       "elBulli": { stars: 3 },
       "Ora": { stars: 2 },
       "Akelarre": { stars: 3 }
-    }, x => x.stars === 2), "noma")
+    }, x => x.stars === 2), "noma");
   });
 
   it("returns correct key", () => {
@@ -26,7 +26,7 @@ describe("#findKey", () => {
       'barney': { 'age': 36, 'active': true },
       'fred': { 'age': 40, 'active': false },
       'pebbles': { 'age': 1, 'active': true }
-    }, o => o.age < 48), 'barney')
+    }, o => o.age < 48), 'barney');
   });
   
 });

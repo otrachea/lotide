@@ -11,7 +11,7 @@ describe("#eqObjects", () => {
   const cd2 = { c: "1", d: ["2", 3, 4] };
 
   it("returns true when object keys initalized in different order: ab, ba", () => {
-    assert.isTrue(eqObjects(ab, ba))
+    assert.isTrue(eqObjects(ab, ba));
   });
 
   it("returns false for ab, abc", () => {
@@ -24,7 +24,7 @@ describe("#eqObjects", () => {
 
   it("returns false for cd, cd2", () => {
     assert.isFalse(eqObjects(cd, cd2));
-  })
+  });
 
   it("returns true of nested objects", () => {
     assert.isTrue(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }));
