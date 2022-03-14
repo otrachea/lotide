@@ -1,4 +1,5 @@
-import { assertEqual } from "./assertEqual.js";
+// import { assertEqual } from "./assertEqual.js";
+const assertEqual = require("./assertEqual");
 
 const countLetters = (str) => {
 
