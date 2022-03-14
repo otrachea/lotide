@@ -5,5 +5,23 @@
   },
   "scripts": {
     "test": "mocha"
-  }
+  },
+  "name": "@trachea/lotide",
+  "description": "A mini clone of the [Lodash](https://lodash.com) library.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/otrachea/lotide.git"
+  },
+  "author": "Francesca H.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/otrachea/lotide/issues"
+  },
+  "homepage": "https://github.com/otrachea/lotide#readme"
 }
