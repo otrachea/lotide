@@ -1,16 +1,16 @@
-const assert = require("chai").assert
+const assert = require("chai").assert;
 const head = require("../head");
 
 describe("#head", () => {
-  it("returns 5 for [5, 6, 7]", () => {
+  it("head([5, 6, 7]) returns 5", () => {
     assert.strictEqual(head([5, 6, 7]), 5);
   });
 
-  it(`returns "Hello" for ["Hello", "Lighthouse", "Labs"]`, () => {
+  it(`head(["Hello", "Lighthouse", "Labs"]) returns "Hello"`, () => {
     assert.strictEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
   });
 
-  it("returns undefined for []", () => {
+  it("head([]) returns undefined", () => {
     assert.strictEqual(head([]), undefined);
   });
 
