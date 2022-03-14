@@ -11,7 +11,7 @@ describe("#map", () => {
   });
 
   it("returns [1, 4, 9, 16, 25])", () => {
-    assert.deepEqual(map(test1, num => num * num), [1, 4, 9, 16, 25]);
+    assert.deepEqual(map([1, 2, 3, 4, 5], num => num * num), [1, 4, 9, 16, 25]);
   });
 
   it("returns [0, -1, -2, -3, -4]", () => {
