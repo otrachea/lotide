@@ -1,16 +1,23 @@
+const assert = require("chai").assert;
 const tail = require("../tail");
-const assertEqual = require("../assertEqual");
 
-const result = tail(['a', 'b', 'c', 'd']);
-assertEqual(result.length, 3);
-assertEqual(result[0], 'b');
-assertEqual(result[1], 'c');
-assertEqual(result[2], 'd');
+describe("#tail", () => {
 
-const arr1 = [1, 2, 3, 4];
-const arr1copy = arr1;
-assertEqual(arr1, arr1copy);
-assertEqual(arr1.length, 4);
+  it("tail(['a', 'b', 'c', 'd']) returns ['b', 'c', 'd']", () => {
+    assert.deepEqual(tail(['a', 'b', 'c', 'd']), ['b', 'c', 'd']);
+  });
+  
+  it("tail does not mutate the input array", () => {
+    const arr1 = [1, 2, 3, 4];
+    arr2 = tail(arr1);
+    assert.deepEqual(arr1, [1, 2, 3, 4]);
+  });
 
-assertEqual(tail([1]).length, 0);
-assertEqual(tail([]).length, 0);
+  it("tail([1]) returns []", () => {
+    assert.deepEqual(tail([1]), []);
+  })
+
+  it("tail([]) returns []", () => {
+    assert.deepEqual(tail([]), []);
+  })
+});
