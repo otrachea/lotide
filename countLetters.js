@@ -1,6 +1,3 @@
-// import { assertEqual } from "./assertEqual.js";
-const assertEqual = require("./assertEqual");
-
 const countLetters = (str) => {
 
   str = str.toLowerCase();
@@ -15,6 +12,4 @@ const countLetters = (str) => {
   return counter;
 };
 
-let result1 = countLetters('LHL');
-assertEqual(result1['l'], 2);
-assertEqual(result1['h'], 1);
+module.exports = countLetters;

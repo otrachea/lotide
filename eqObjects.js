@@ -1,5 +1,5 @@
-import { assertEqual } from "./assertEqual.js";
-import { eqArrays } from "./eqArrays.js";
+const assertEqual = require("./assertEqual");
+const eqArrays = require("./eqArrays");
 
 const eqObjects = (obj1, obj2) => {
   // different number of keys
@@ -29,7 +29,7 @@ const eqObjects = (obj1, obj2) => {
   return true;
 };
 
-export { eqObjects };
+module.exports = eqObjects;
 
 // const ab = { a: "1", b: "2" };
 // const ba = { b: "2", a: "1" };
